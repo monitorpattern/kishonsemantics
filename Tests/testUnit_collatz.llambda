@@ -1,0 +1,7 @@
+letrec collatz u0 =
+    fun n -> if (n = 1) then u0 else
+    (if u0 mod 2 = 0 then
+      collatz (u0 / 2) (n - 1)
+    else
+      collatz ((u0 * 3) + 1) (n - 1)
+in collatz 15 40 

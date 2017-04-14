@@ -1,0 +1,36 @@
+Function-name correspondance between FPC paper and JFP articles
+(Kishon, Hudak, Consel)
+===============================================================
+
+Debugger.ml
+
+FUNCTION NAMES
+
+over_phi --> toAns
+denval --> D
+
+
+TYPES
+
+type monState = mms
+type 'a semArgs = 'a env
+type 'a kontArgs = 'a denval
+
+OTHER NAMES
+Note : over_X -> X with a bar over it.
+
+*** Fig. 7 :
+
+newEval --> over_Epsilon 
+evalFunctional --> G_lambda
+postMonitor --> updPost and thus postMonitor kont --> k_post
+preMonitor --> updPre
+postFun --> M^Epsilon_post
+. --> rond == (>>)
+kArgs -> v (the denotable value)
+kont -> k
+exp -> [[ over_expr ]]
+semArgs -> rho (in the examples. Can be richer)
+
+combineEval evalFunctional --> over_g_lambda
+(combineEval evalFunctional : combineEval is the over bar on  "evalFunctional".)

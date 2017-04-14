@@ -1,0 +1,18 @@
+To test the monitoring semantics use cases, use one of the following options
+(./llambda <option>):
+----------------------------------------------------------------
+all :
+    all the implemented monitors
+semantics :
+    the semantic-based interpreter
+tracer :
+    the tracer (print the call stack of a set of programs)
+profiler[2] :
+    the profiler (any of the two versions)
+demon[2] :
+    the demon (any of the two versions)
+collector :
+    the collecting monitor 
+monitor :
+    the first version of a monitor
+----------------------------------------------------------------

@@ -1,0 +1,10 @@
+letrec mult n = (fun m -> m * n) in
+  letrec fac n =
+        if n = 0 then 
+       1 
+      else
+        let r = fac (n - 1) in 
+        (mult n r)
+      in  
+  fac 4
+

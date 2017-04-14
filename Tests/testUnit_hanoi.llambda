@@ -1,0 +1,9 @@
+letrec hanoi n =
+    fun D ->
+    fun A -> fun I ->
+        if (1 <= n) then
+           let r = hanoi (n - 1)  D  I  A  in
+           hanoi (n - 1)  I  A  D
+           else 0
+# number of disks Dep, Arr, Int.
+in hanoi 3  1  3  2

@@ -1,0 +1,50 @@
+# ---------------------------------------------- FACTORIAL CURRIFIED
+
+# let rec fac n = fun acc -> if n = 1 then acc else fac (n-1) (n * acc);;
+val fac : int -> int -> int = <fun>
+# #trace fac;;
+fac is now traced.
+
+# fac 4;;
+fac <-- 4
+fac --> <fun>
+- : int -> int = <fun>
+
+# fac 4 1;;
+fac <-- 4
+fac --> <fun>
+fac* <-- 1
+fac <-- 3
+fac --> <fun>
+fac* <-- 4
+fac <-- 2
+fac --> <fun>
+fac* <-- 12
+fac <-- 1
+fac --> <fun>
+fac* <-- 24
+fac* --> 24
+fac* --> 24
+fac* --> 24
+fac* --> 24
+- : int = 24
+
+# ---------------------------------------------- FACTORIAL UNCURRIFIED
+
+# let rec facu (n, acc) = if n = 1 then acc else facu (n-1, n*acc);;
+val facu : int * int -> int = <fun>
+
+# #trace facu;;
+facu is now traced.
+
+# facu (4, 1);;
+facu <-- (4, 1)
+facu <-- (3, 4)
+facu <-- (2, 12)
+facu <-- (1, 24)
+facu --> 24
+facu --> 24
+facu --> 24
+facu --> 24
+- : int = 24
+# 

@@ -1,0 +1,36 @@
+# ---------------------------
+# To generate documentation: make htdoc
+
+OCAMLMAKEFILE = ./OCamlMakefile
+LIBS=str unix delimcc
+
+# ---- Source Folders -----------------
+SRC_DIR = ./
+
+# ---- OCamlMakefile Variables ----------
+
+# ---- OCamlMakefile Variables ----------
+# The Caml compilers. You may have to add various -I options.
+CAMLYACC = menhir
+# Handling camllex files
+LEXSOURCES = lexer.mll 
+LEXGENERATED = lexer.mli lexer.ml
+# Handling camlyacc files
+YACCSOURCES = parser.mly
+YACCGENERATED =parser.mli parser.ml
+
+# OCAMLDOCFLAGS = 
+SOURCES = \
+  llambdaAst.ml \
+  parser.mly \
+  lexer.mll \
+  loader.ml \
+  main.ml
+
+DOC_FILES = $(filter %.ml, $(SOURCES))
+
+RESULT = llambdaAst
+
+#PACKS=unix
+
+include $(OCAMLMAKEFILE)

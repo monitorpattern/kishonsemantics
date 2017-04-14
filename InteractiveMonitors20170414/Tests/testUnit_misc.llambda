@@ -1,0 +1,6 @@
+letrec somme n =
+    fun m ->
+      let toto1 = m + n
+      in let titi2 = toto1
+         in toto1 + titi2
+in somme 5 7

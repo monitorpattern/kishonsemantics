@@ -1,0 +1,21 @@
+This directory contains the experiment of the paper of Kishon, Hudak and Consel.
+
+  "Monitoring Semantics : A Formal Framework for Specifying, Implementing,
+and Reasoning about Execution Monitors"
+
+- fixpoint.ml is a library provided by okmij people (the ones who
+  implemented delimcc)
+  
+- monitor.ml is a not compiled file. It serves as a template for implementing
+  monitors
+
+- llambda*.ml are the files implementing a simple typed lambda calculus,
+  the language from the paper.
+
+- demon*.ml, tracer*.ml, collectingMonitor*.ml are faithfull implementations of the paper's example.
+
+How to compile:
+
+- run make. It will generate one executable file named "llambda"
+It executes all of the anonymous let definitions contained in the ml files
+(let _ = ...)

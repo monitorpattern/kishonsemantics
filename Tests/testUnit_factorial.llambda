@@ -1,0 +1,9 @@
+letrec fac n =
+      if n = 0 then 1 else n * fac (n - 1)  in
+      fac 4
+
+letrec plus n = fun m -> n + m in
+    plus 5 6
+
+
+  
